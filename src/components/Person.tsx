@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-interface PersonProps {
+interface User {
   name: string;
   age: number;
   isMarried: boolean;
 }
 
-const Person = ({ name, age, isMarried }: PersonProps) => {
+const User = ({ name, age, isMarried }: User) => {
   const [isShowDetails, setIsShowDetails] = useState<boolean>(false);
   const [personBio, setPersonBio] = useState<string | null>(null);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,4 +32,4 @@ const Person = ({ name, age, isMarried }: PersonProps) => {
   );
 };
 
-export default Person;
+export default User;
